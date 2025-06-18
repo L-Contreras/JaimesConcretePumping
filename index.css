@@ -1,0 +1,277 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* nav */
+nav {
+    background-color: white;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav p {
+    white-space: nowrap;
+    padding-left: 40px;
+    font-size: 30px;
+    color: black;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    list-style: none;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 40px;
+    color:  black;
+    font-size: 25px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.call-button {
+    background-color: #28a745;
+    height: 50px;
+    width: 150px;
+    color: white;
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.call-button:hover {
+    background-color: #218838;
+    text-decoration: none;
+}
+
+
+/* header */
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.85);
+    
+}
+
+header {
+    width: auto;
+    height: 600px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    margin: 20px;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* why jaimes concrete section */
+
+.why-container {
+    width: 100%;
+    height: 100%;
+}
+
+.text {
+    padding: 20px;
+}
+
+.why-container h2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.about-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    gap: 50px;
+}
+
+.about-info {
+    height: 500px;
+    width: 600px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.about-info img {
+    width: 100%;
+    height: 100%;
+}
+
+/* portait display */
+
+.portrait-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.portrait-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* service box */
+
+.service-box {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+.service-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
+
+/* contact */
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.contact-box {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    width: 400px;
+    height: 100px;
+    text-align: center;
+}
+
+/* footer */
+footer {
+    background-color: white;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* for mobile */
+@media (max-width: 480px) {
+    nav p {
+        display: none;
+    }
+
+    .call-button {
+        display: none;
+    }
+
+    .header-text {
+        font-size: 1.8rem;
+    }
+    
+    .about-box {
+        flex-direction: column;
+    }
+
+    .about-info {
+        width: 380px;
+        height: auto;
+    }
+
+    .portrait-display {
+        grid-template-columns: repeat(1, 3fr);
+        width: 380px;
+    }
+
+    .contact-box {
+        width: 200px;
+        height: 100px;
+    }
+
+    footer {
+        text-align: center;
+    }
+  }
